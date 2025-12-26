@@ -1,0 +1,27 @@
+{
+  "name": "bookvisualizer",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "pnpm run build && netlify dev",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "6.6.3",
+    "@astrojs/svelte": "7.2.4",
+    "@astrojs/tailwind": "6.0.2",
+    "@threlte/core": "8.3.1",
+    "@threlte/extras": "9.7.1",
+    "@threlte/theatre": "3.1.2",
+    "astro": "5.16.2",
+    "astro-compress": "2.3.8",
+    "astro-icon": "1.1.5",
+    "svelte": "5.46.1",
+    "tailwindcss": "3.4.3",
+    "three": "0.182.0",
+    "typescript": "5.9.3"
+  }
+}
