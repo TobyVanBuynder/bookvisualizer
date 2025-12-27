@@ -6,9 +6,11 @@
   "scripts": {
     "astro": "astro",
     "dev": "astro dev",
+    "books:compress": "node scripts/compress-books.mjs",
+    "books:fetch": "node scripts/fetch-books.mjs",
     "build": "astro build",
-    "build:books": "node scripts/fetch-books.mjs",
-    "preview": "pnpm run build && netlify dev"
+    "build:books": "pnpm run books:fetch && pnpm run books:compress",
+    "preview": "pnpm run build && pnpm run dev"
   },
   "dependencies": {
     "@astrojs/svelte": "7.2.4",
