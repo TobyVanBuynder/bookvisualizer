@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "astro": "astro",
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "pnpm run build && netlify dev",
-    "astro": "astro"
+    "build:books": "node scripts/fetch-books.mjs",
+    "preview": "pnpm run build && netlify dev"
   },
   "dependencies": {
     "@astrojs/netlify": "6.6.3",
@@ -24,5 +25,13 @@
     "tailwindcss": "3.4.3",
     "three": "0.182.0",
     "typescript": "5.9.3"
+  },
+  "devDependencies": {
+    "csv-parse": "^6.1.0",
+    "fetch": "^1.1.0",
+    "fs-extra": "^11.3.3",
+    "node-fetch": "^3.3.2",
+    "path": "^0.12.7",
+    "sharp": "^0.34.5"
   }
 }
