@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import netlify from '@astrojs/netlify';
 
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -13,9 +12,20 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   output: 'static',
 
-  integrations: [tailwind(), svelte()],
-
-  adapter: netlify(),
+  integrations: [tailwind(), svelte(),
+    (await import("@playform/compress")).default({
+      CSS: true,
+      HTML: {
+        'html-minifier-terser': {
+          removeAttributeQuotes: false,
+        },
+      },
+      Image: false,
+      JavaScript: true,
+      JSON: true,
+      SVG: false,
+    })
+  ],
 
   vite: {
     build: {
