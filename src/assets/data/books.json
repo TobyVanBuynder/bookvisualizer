@@ -1,0 +1,44 @@
+[
+  {
+    "isbn": "9781853260636",
+    "title": "Candide",
+    "author": "Voltaire",
+    "year": 1759,
+    "textureURL": "9781853260636.jpg"
+  },
+  {
+    "isbn": "9780735273689",
+    "title": "Hyperfocus: How to Be More Productive in a World of Distraction",
+    "author": "Chris Bailey",
+    "year": 2018,
+    "textureURL": "9780735273689.jpg"
+  },
+  {
+    "isbn": "9781786332257",
+    "title": "Creativity: A Short and Cheerful Guide",
+    "author": "John Cleese",
+    "year": 2020,
+    "textureURL": "9781786332257.jpg"
+  },
+  {
+    "isbn": "9780061125270",
+    "title": "The Voyage of the Dawn Treader (Chronicles of Narnia, #3)",
+    "author": "C.S. Lewis, Pauline Baynes",
+    "year": 1952,
+    "textureURL": "9780061125270.jpg"
+  },
+  {
+    "isbn": "9781335005625",
+    "title": "What You Are Looking For Is in the Library",
+    "author": "Michiko Aoyama, Alison Watts",
+    "year": 2020,
+    "textureURL": "9781335005625.jpg"
+  },
+  {
+    "isbn": "9780765389220",
+    "title": "Starter Villain",
+    "author": "John Scalzi",
+    "year": 2023,
+    "textureURL": "9780765389220.jpg"
+  }
+]
