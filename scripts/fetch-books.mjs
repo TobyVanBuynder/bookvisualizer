@@ -6,8 +6,8 @@ import { parse } from 'csv-parse/sync';
 
 
 const INPUT_FILE = './.goodreads/goodreads_library_export.csv';
-const OUTPUT_JSON = './src/assets/data/books.json';
-const IMAGE_DIR = './src/assets/images/books';
+const OUTPUT_JSON = './src/data/books.json';
+const IMAGE_DIR = './public/images/books';
 const WEBSITE_SHELF = 'favorites';
 const FETCH_COVERS = false;
 
