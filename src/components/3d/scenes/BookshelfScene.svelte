@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { useLoader } from '@threlte/core'
-  import { TextureLoader } from 'three'
-
+    import { useLoader } from '@threlte/core'
+    import { useTexture } from '@threlte/extras';
     import { SheetObject } from '@threlte/theatre';
+
     import Camera from '../camera/Camera.svelte';
     import BookMesh from '../meshes/BookMesh.svelte'
 
@@ -10,19 +10,15 @@
     const textureURL = 'https://ia800505.us.archive.org/view_archive.php?archive=/35/items/l_covers_0014/l_covers_0014_43.zip&file=0014432013-L.jpg';
 
     const books = [
-        { xPos: 0, textureURL: textureURL },
-        /*{ xPos: 0.2, color: "orange", texture: texture },
-        { xPos: 0.4, color: "yellow", texture: texture },
-        { xPos: 0.6, color: "green", texture: texture },
-        { xPos: 0.8, color: "cyan", texture: texture },
-        { xPos: 1, color: "blue", texture: texture },
-        { xPos: 1.2, color: "magenta", texture: texture },*/
+        { textureURL: textureURL },
+        { textureURL: textureURL },
+        { textureURL: textureURL },
+        { textureURL: textureURL },
     ];
-    
-    const loader = useLoader(TextureLoader);
 
     const canOrbit = import.meta.env.DEV;
 
+    const padding = 0.1;
 </script>
 
 <Camera canOrbit={canOrbit}/>
@@ -31,13 +27,11 @@
 <SheetObject key="books">
     {#snippet children({ Transform })}
         <Transform>
-            {#each books as book}
-            {#await loader.load(book.textureURL).then((texture) => texture) then texture}
+            {#each books as book, index}
             <BookMesh
-                xPos={book.xPos}
-                texture={texture}
+                xPos={0.2 * index + padding * index}
+                texture={useTexture(book.textureURL)}
             />
-            {/await}
             {/each}
         </Transform>
     {/snippet}
